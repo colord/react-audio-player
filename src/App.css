@@ -1,0 +1,140 @@
+:root {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.App {
+  height: 100vh;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  /* background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%); */
+  /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+   */
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  transition: background 0.4s ease;
+}
+
+.audio-player {
+  margin-top: 8rem;
+  border-radius: 1.2rem;
+  width: 380px;
+  height: 37rem;
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.3);
+  padding-block: 3rem;
+  padding-inline: 2rem;
+  transition: box-shadow 0.55s ease-in-out;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.audio-player:hover {
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+}
+
+.artwork {
+  width: 300px;
+  height: 250px;
+  /* Preserver aspect ratio */
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.track-info {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-top: 1.3rem;
+  margin-bottom: 0;
+}
+
+.artist {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.6rem;
+  gap: 1.7rem;
+  fill: #0b0033;
+}
+
+.audio-controls .prev svg,
+.audio-controls .next svg {
+  width: 40px;
+  height: 40px;
+}
+
+.audio-controls .play svg,
+.audio-controls .pause svg {
+  width: 55px;
+  height: 55px;
+}
+
+svg:hover {
+  fill: #346983;
+}
+
+input[type=range] {
+  height: 5px;
+  width: 100%;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background: #346983;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background: #5c9cbd;
+}
+
+.footer {
+  margin-top: 1rem;
+  width: 370px;
+  text-align: center;
+  font-size: 0.96rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  line-height: 22px;
+  color: #662439;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #c73e69;
+}
+
+.footer a:hover {
+  opacity: 1;
+  color: #662439;
+}
